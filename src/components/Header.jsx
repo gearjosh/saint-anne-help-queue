@@ -11,7 +11,9 @@ function Header(){
     borderRadius: '50%'
   };
   return (
-    <h1 style={headerStyles}>Help Queueueueueue</h1>
+    <div>
+      <h1 style={headerStyles}>Help Queueueueueue</h1>
+    </div>
   );
 }
 

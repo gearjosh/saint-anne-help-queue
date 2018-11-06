@@ -2,16 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Ticket(props){
-  const ticketStyles = {
-    background: 'linear-gradient(lightseagreen, aqua, gold, dodgerblue)',
-    color: 'fuchsia',
-    fontFamily: 'comic sans MS',
-    border: '5px solid orange',
-    borderRadius: '1rem',
-    padding: '1rem'
-  };
+
   return (
-    <div style={ticketStyles}>
+    <div>
+      <style jsx>{`
+        div {
+          background: linear-gradient(lightseagreen, aqua, gold, dodgerblue);
+          color: fuchsia;
+          font-family: comic sans MS;
+          border: 5px solid orange;
+          border-radius: 1rem;
+          padding: 1rem;
+        }
+        div:hover {
+          transform: scale(1.05);
+        }
+      `}</style>
       <h3>{props.location} - {props.names}</h3>
       <hr/>
       <hr/>
