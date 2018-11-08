@@ -2,6 +2,8 @@ import React from 'react';
 import TicketList from './TicketList';
 import Header from './Header';
 import Body from './Body';
+import { Switch, Route } from 'react-router-dom';
+import NewTicketForm from './NewTicketForm';
 
 function App(){
   const appStyles = {
@@ -12,9 +14,12 @@ function App(){
   return(
     <div style={appStyles}>
       <Header/>
-      <TicketList/>
+      <Switch>
+        <Route exact path='/' component={TicketList} />
+        <Route path='/newticket' component={NewTicketForm} />
+      </Switch>
       <Body
-        image="https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_960_720.jpg"
+        image="https://i.etsystatic.com/9945573/r/il/f9048d/743456781/il_570xN.743456781_k342.jpg"
         caption="May the sainted child bless your struggles, for they shall be neverending..."/>
     </div>
   );

@@ -17,6 +17,7 @@ function Body(props){
     <div style={bodyStyles}>
       <img src={props.image}></img>
       <h4>{props.caption}</h4>
+      <h6><a>i am not a link, but i am an a tag</a></h6>
       <hr/>
       <hr/>
       <hr/>
