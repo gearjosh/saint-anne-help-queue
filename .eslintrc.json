@@ -15,6 +15,11 @@
         "react"
     ],
     "rules": {
+    "react/jsx-handler-names": 2,
+    "react/require-render-return": 2,
+    "react/no-unused-state": 2,
+    "react/prefer-stateless-function": 2,
+    "react/no-direct-mutation-state": 2,
     "react/jsx-uses-vars": 2,
     "react/jsx-uses-react": 2,
     "react/jsx-no-duplicate-props": 2,
