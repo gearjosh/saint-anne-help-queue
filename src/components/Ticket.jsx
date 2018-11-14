@@ -21,6 +21,7 @@ function Ticket(props){
       <h3>{props.location} - {props.names}</h3>
       <hr/>
       <hr/>
+      <h2>{props.formattedWaitTime} ago now today time</h2>
       <h2><em>{props.issue}</em></h2>
       <hr/>
       <hr/>
@@ -32,7 +33,8 @@ function Ticket(props){
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  issue: PropTypes.string.isRequired
+  issue: PropTypes.string.isRequired,
+  formattedWaitTime: PropTypes.string.isRequired
 };
 
 export default Ticket;

@@ -37,16 +37,16 @@ function Header(){
           margin: 0 1rem;
         }
       `}</style>
-    <h1 style={headerStyles}>Help Queueueueueue</h1>
-    <ul>
-      <Link to="/">
-        <li>Home</li>
-      </Link>
-      <span className="spanner"> | </span>
-      <Link to="/newticket">
-        <li>Create Ticket</li>
-      </Link>
-    </ul>
+      <h1 style={headerStyles}>Help Queueueueueue</h1>
+      <ul>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <span className="spanner"> | </span>
+        <Link to="/newticket">
+          <li>Create Ticket</li>
+        </Link>
+      </ul>
     </div>
   );
 }
