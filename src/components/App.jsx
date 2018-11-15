@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import TicketList from './TicketList';
 import Body from './Body';
+import Admin from './Admin';
 import Error404 from './Error404';
 import NewTicketControl from './NewTicketControl';
 import { Switch, Route } from 'react-router-dom';
@@ -12,9 +13,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTicketList: []
+      masterTicketList: [],
+      selectedTicket: null
     };
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
+    this.handleChangingSelectedTicket = this.handleChangingSelectedTicket.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +48,10 @@ class App extends React.Component {
     this.setState({masterTicketList: newMasterTicketList});
   }
 
+  handleChangingSelectedTicket(ticket){
+    // alert('the selected ticket is currently ' + this.state.selectedTicket.names + '\'s ticket');
+    this.setState({selectedTicket: ticket});
+  }
 
   render() {
     const appStyles = {
@@ -57,7 +64,16 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList} />} />
-          <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />}  />
+          <Route path='/newticket'
+            render={()=>
+              <NewTicketControl
+                onNewTicketCreation={this.handleAddingNewTicketToList} />}  />
+          <Route
+            path='/admin'
+            render={(props)=>
+              <Admin ticketList={this.state.masterTicketList}
+                currentRouterPath={props.location.pathname} onTicketSelection={this.handleChangingSelectedTicket}
+                selectedTicket={this.state.selectedTicket}/>} />
           <Route component={Error404} />
         </Switch>
         <Body
