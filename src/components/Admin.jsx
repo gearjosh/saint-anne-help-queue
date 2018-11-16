@@ -10,12 +10,28 @@ function Admin(props){
   }
   return (
     <div>
-      <h2>Admin</h2>
-      {optionalSelectedTicketContent}
-      <TicketList
-        ticketList={props.ticketList}
-        currentRouterPath={props.currentRouterPath}
-        onTicketSelection={props.onTicketSelection} />
+      <style jsx>{`
+          h2 {
+            font-family: arial rounded mt bold;
+            font-size: 4rem;
+            background: linear-gradient(to right, pink, hotpink, fuchsia, orangered, tomato, purple, indigo, royalblue, dodgerblue, teal, turquoise, aqua, seagreen, forestgreen, lime, springgreen, yellow, wheat, peachpuff);
+            padding: 1rem;
+            border: 1rem dotted #dda0dd;
+            border-radius: 4rem;
+            outline: 1.5rem dotted gold;
+            margin: 3rem;
+            text-align: right;
+            letter-spacing: 7rem;
+            color: white;
+            text-shadow: 0 4px 0 #aaa;
+          }
+          `}</style>
+          <h2>Admin</h2>
+        {optionalSelectedTicketContent}
+        <TicketList
+          ticketList={props.ticketList}
+          currentRouterPath={props.currentRouterPath}
+          onTicketSelection={props.onTicketSelection} />
     </div>
   );
 }
