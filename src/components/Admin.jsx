@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TicketList from './TicketList';
 import TicketDetail from './TicketDetail';
+import { connect } from 'react-redux';
 
 function Admin(props){
   let optionalSelectedTicketContent = null;
-  if (props.selectedTicket != null) {
+  if (props.selectedTicket.length > 0) {
     optionalSelectedTicketContent = <TicketDetail selectedTicket={props.ticketList[props.selectedTicket]}/>;
   }
   return (
@@ -42,5 +43,13 @@ Admin.propTypes = {
   onTicketSelection: PropTypes.func.isRequired,
   selectedTicket: PropTypes.string
 };
+const mapStateToProps = state => {
+  return {
+    selectedTicket: state.selectedTicket,
+    ticketList: state.masterTicketList
+  };
+};
 
-export default Admin;
+export default connect(mapStateToProps)(Admin);
+
+//ending the day halfway down this page at Refactor just after adding to if (props...) above
