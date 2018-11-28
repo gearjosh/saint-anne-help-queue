@@ -26,12 +26,12 @@ function Admin(props){
             text-shadow: 0 4px 0 #aaa;
           }
           `}</style>
-          <h2>Admin</h2>
-        {optionalSelectedTicketContent}
-        <TicketList
-          ticketList={props.ticketList}
-          currentRouterPath={props.currentRouterPath}
-          onTicketSelection={props.onTicketSelection} />
+      <h2>Admin</h2>
+      {optionalSelectedTicketContent}
+      <TicketList
+        ticketList={props.ticketList}
+        currentRouterPath={props.currentRouterPath}
+        onTicketSelection={props.onTicketSelection} />
     </div>
   );
 }

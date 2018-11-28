@@ -39,16 +39,16 @@ function Header(){
       `}</style>
       <h1 style={headerStyles}>Help Queueueueueue</h1>
       <ul>
-        <Link to="/">
+        <Link to="/" replace>
           <li>Home</li>
         </Link>
         <span className="spanner"> | </span>
-        <Link to="/newticket">
+        <Link to="/newticket" replace>
           <li>Create Ticket</li>
         </Link>
       </ul>
     </div>
   );
 }
-
+//there is something going on where these links^ don't seem to be working properly... hitting home from submit form page does nothing
 export default Header;
