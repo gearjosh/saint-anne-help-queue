@@ -50,5 +50,5 @@ function Header(){
     </div>
   );
 }
-//there is something going on where these links^ don't seem to be working properly... hitting home from submit form page does nothing
+
 export default Header;
