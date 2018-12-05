@@ -34,7 +34,7 @@ function Ticket(props){
       <h3>{props.location} - {props.names}</h3>
       <hr/>
       <hr/>
-      <h2>{props.formattedWaitTime} ago now today time</h2>
+      <h2>{props.formattedWaitTime} now based on today's time for me now</h2>
 
     </div>;
 
