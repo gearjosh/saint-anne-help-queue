@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Moment from 'moment'; // eslint-disable-line
-import c from './../constants';
+import constants from './../constants';
+import { c } = constants;
 
 
 function Ticket(props){

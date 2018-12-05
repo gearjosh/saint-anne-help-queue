@@ -9,14 +9,15 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import Moment from 'moment'; // eslint-disable-line
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import c from './../constants';
+import constants from './../constants';
+import { c } = constants;
 
 class App extends React.Component {
 
   componentDidMount() {
-    this.waitTimeUpdateTimer = setInterval(() => {
-      this.updateTicketElapsedWaitTime()},
-    6000
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateTicketElapsedWaitTime(),
+    60000
     );
   }
 
